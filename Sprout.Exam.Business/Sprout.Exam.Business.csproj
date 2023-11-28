@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!--<PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>-->
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+		<TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+		<IsPackable>false</IsPackable>
+		<!-- Please note that at the end of ClientApp (being the name of the folder for the front-end) there's a backwards slash  -->
+		<SpaRoot>ClientApp\</SpaRoot>
+		<DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sprout.Exam.Common\Sprout.Exam.Common.csproj" />
+    <ProjectReference Include="..\Sprout.Exam.DataAccess\Sprout.Exam.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
